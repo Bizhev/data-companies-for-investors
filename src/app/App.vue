@@ -1,20 +1,25 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
+import { TheHeader } from '@/widgets'
+import { useRoute} from 'vue-router';
+import { computed } from 'vue';
+import {FullPage} from "@/shared/ui/layouts";
+const route = useRoute();
+
+
+const computedLayoutComponent = computed(()=>route.meta.layout || FullPage)
 
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/login">Login</RouterLink>
-        <RouterLink to="/company">Login</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <component :is="computedLayoutComponent">
+    <template v-slot:header>
+      <TheHeader />
+    </template>
 
-  <RouterView />
+    <template v-slot:default>
+      <router-view />
+    </template>
+  </component>
 </template>
 
 <style scoped>
