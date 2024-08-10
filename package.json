@@ -16,8 +16,13 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.16.12",
+    "axios": "^1.7.3",
+    "dayjs": "^1.11.12",
+    "inversify": "^6.0.2",
     "pinia": "^2.1.7",
     "quasar": "^2.16.6",
+    "radash": "^12.1.0",
+    "reflect-metadata": "^0.2.2",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
@@ -36,6 +41,7 @@
     "eslint-plugin-cypress": "^3.3.0",
     "eslint-plugin-vue": "^9.23.0",
     "jsdom": "^24.1.0",
+    "less": "^4.2.0",
     "npm-run-all2": "^6.2.0",
     "sass": "^1.33.0",
     "start-server-and-test": "^2.0.4",
